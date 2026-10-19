@@ -1,0 +1,11 @@
+# Independent sub-repositories (tracked separately)
+armonia-api/
+armonia-dashboard/
+armonia-landing/
+
+# Editor / Obsidian / OS
+.obsidian/
+.vscode/
+.idea/
+*.swp
+.direnv/
