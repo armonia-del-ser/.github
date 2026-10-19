@@ -5,14 +5,14 @@ x 2026-10-18 (A) Initialize workspace root as armonia-del-ser/.profile repositor
 x 2026-10-18 (A) Slice and commit pending AGENTS.md, README.md, and flake.nix changes in armonia-dashboard and open PR +dashboard @git
 x 2026-10-18 (A) Slice and commit pending AGENTS.md, README.md, and flake.nix changes in armonia-landing and open PR +landing @git
 x 2026-10-18 (A) Slice and commit pending orthogonal state engine, OAuth allowlist, AGENTS.md, and flake.nix changes in armonia-api and open PR +api @git issue:armonia-api#3
-(B) Add sqlmodel, sqlalchemy-libsql, pytest-mock, and mutmut dependencies to armonia-api/pyproject.toml +api @db issue:armonia-api#6
-(B) Define SQLModel table models in armonia-api/app/models/ and configure portable engine in app/db/database.py +api @db issue:armonia-api#6
+x 2026-10-19 (B) Add sqlmodel, sqlalchemy-libsql, pytest-mock, and mutmut dependencies to armonia-api/pyproject.toml +api @db issue:armonia-api#6
+x 2026-10-19 (B) Define SQLModel table models in armonia-api/app/models/ and configure portable engine in app/db/database.py +api @db issue:armonia-api#6
 (B) Extract raw SQL queries from FastAPI routers into armonia-api/app/repositories/ and domain logic into app/services/ +api @arch issue:armonia-api#6
 (B) Isolate external I/O with pytest-mock and run mutmut boundary audit on armonia-api/app/services/ +api @test issue:armonia-api#6
 (B) Implement GET /availability endpoint with mandatory buffer collision filtering in armonia-api +api @backend issue:armonia-api#3
 (B) Implement Group Workshop Roster API (GET /rosters, POST /rosters/quick-checkin) in armonia-api +api @backend issue:armonia-api#3
 (C) Implement live Google Calendar API Pull-on-Read and Push-on-Write synchronization in armonia-api/app/services/calendar.py +api @gcal issue:armonia-api#4
-(C) Scaffold Vite+, Tailwind, HTMX, and Biome project structure in armonia-dashboard +dashboard @ui issue:armonia-dashboard#1
-(C) Implement 48-hour follow-up queue, payment acknowledgment, and agenda views in armonia-dashboard with Anne Droid +dashboard @ui issue:armonia-dashboard#1
+x 2026-10-19 (C) Scaffold Vite+, Tailwind, HTMX, and Biome project structure in armonia-dashboard +dashboard @ui issue:armonia-dashboard#1
+x 2026-10-19 (C) Implement 48-hour follow-up queue, payment acknowledgment, and agenda views in armonia-dashboard with Anne Droid +dashboard @ui issue:armonia-dashboard#1
 (C) Scaffold Vite+, Tailwind, HTMX, and Biome project structure in armonia-landing +landing @ui issue:armonia-landing#1
 (C) Implement public service catalog, slot picker, and SPEI WhatsApp handoff in armonia-landing with Anne Droid +landing @ui issue:armonia-landing#1
