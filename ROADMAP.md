@@ -63,10 +63,10 @@ During our workspace audit on `2026-10-18`, we identified three areas where orig
 - [x] Slice, commit (`git-commit`), and open PR for `feat/operational-truth-mvp` in `armonia-api` ([PR #7](https://gitea.roadtotech.me/armonia-del-ser/armonia-api/pulls/7)).
 
 ### Milestone M2: SQLModel + Repository Refactor & Mutation Testing (`armonia-api#6`)
-- [ ] Add `sqlmodel`, `sqlalchemy-libsql`, `pytest-mock`, and `mutmut` to `armonia-api/pyproject.toml`.
-- [ ] Define `SQLModel` table entities in `app/models/` and configure `app/db/database.py` for Turso/SQLite portability.
+- [x] Add `sqlmodel`, `sqlalchemy-libsql`, `pytest-mock`, and `mutmut` to `armonia-api/pyproject.toml`.
+- [x] Define `SQLModel` table entities in `app/models/` and configure `app/db/database.py` for Turso/SQLite portability.
 - [ ] Extract all SQL queries from `app/routers/` into `app/repositories/` and pure business logic into `app/services/`.
-- [ ] Isolate external I/O in tests using `pytest-mock` and run `mutmut` audit against `app/services/`.
+- [x] Isolate external I/O in tests using `pytest-mock` and run `mutmut` audit against `app/services/` (100% kill score, ADR 0006).
 - [ ] Implement `GET /availability` and Group Roster API (`GET /rosters`, `POST /rosters/quick-checkin`) cleanly on top of the new service/repository layers (`armonia-api#3`).
 
 ### Milestone M3: Google Calendar Pull + Push Coordination (`armonia-api#4`)
