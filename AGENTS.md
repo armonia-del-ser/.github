@@ -8,6 +8,7 @@ For operational context & ecosystem topology: [See README](./README.md)
 ## 1. System Discovery & Single Source of Truth (SSOT)
 
 Do not assume architectural requirements or business logic rules. You must explicitly read the dedicated documentation inside each repository before modifying or writing code:
+- **Trajectory & Active Work (`ROADMAP.md` & `todo.txt`):** Read the root [`ROADMAP.md`](./ROADMAP.md) and [`todo.txt`](./todo.txt) to verify the current milestone and active task priorities before starting work.
 - **Repository Technical Blueprint:** Read the local `AGENTS.md` inside the target sub-repository (`armonia-api/`, `armonia-dashboard/`, or `armonia-landing/`) for repository-specific architecture, Nix `devShell` setup, and verification commands.
 - **Product Requirements & Domain Model:** Review `docs/SRS.md` in the relevant repository.
 - **System Topography:** Review `docs/architecture.md`.
@@ -34,8 +35,9 @@ Before writing, modifying, or refactoring any code, you must execute the followi
 - **Chores/Refactors:** `chore/<short-description>` (e.g., `chore/bump-dependencies`)
 
 ### Commit & Push Policy
-- **Main Protection:** **NEVER** commit or push changes directly to the `main` branch.
+- **Main Protection:** **NEVER** commit or push changes directly to the `main` branch of sub-repositories (`armonia-api`, `armonia-dashboard`, `armonia-landing`).
 - **Format:** Follow the [Conventional Commits](https://conventionalcommits.org) specification.
+- **Immediate `git-commit` Handoff Rule (Anti-Accumulation):** Never let verified changes accumulate across multiple tasks or milestones in a dirty working tree. Immediately after completing and verifying a deliverable (and marking it done in `todo.txt`), invoke the `git-commit` skill (`/git-commit`) to slice, review, and commit the changes atomically, followed by `commit-logger`.
 - **NixOS SSH Push Rule:** Prefix Git network push/pull operations with bypass flags to account for Nix store symlinks:
   ```bash
   GIT_SSH_COMMAND="ssh -F /dev/null" git push
@@ -62,7 +64,7 @@ Each sub-repository provides its own Nix `devShell` (`flake.nix` + `.envrc`) and
 
 ## 4. Gitea Organization & CLI (`tea`) Protocol
 
-All repositories are hosted inside the private Gitea instance. Do not make unauthenticated external requests; always leverage the pre-configured `tea` CLI.
+All repositories are hosted inside the private Gitea instance (`armonia-del-ser`). Do not make unauthenticated external requests; always leverage the pre-configured `tea` CLI.
 
 ### Core Commands
 - **List Repository Issues:** `tea issues list --repo armonia-del-ser/<repo-name>`
@@ -73,4 +75,13 @@ All repositories are hosted inside the private Gitea instance. Do not make unaut
 ### Workflow Discipline
 1. **Traceability:** Reference the working Gitea issue number in branch headers and commit message footers (e.g., `Refs: #1`).
 2. **Secret Safety:** Never print or parse credentials, and never expose paths matching `~/.config/tea/config.yml` on terminal logs.
+
+---
+
+## 5. Live Task Tracking (`todo.txt`) & Roadmap Synchronization
+
+For multi-step engineering milestones and deliverables across the workspace:
+- **Standard `todo.txt` Format:** Maintain a comment-free, header-free [`todo.txt`](./todo.txt) at the workspace root formatted for `tuxedo` and `todo.sh` (`~/Config/home/shell/todo.sh`).
+- **Syntax & Metadata:** Prioritize deliverables using `(A)`, `(B)`, `(C)` priorities, project tags (`+api`, `+dashboard`, `+landing`, `+workspace`), contexts (`@arch`, `@db`, `@auth`, `@gcal`, `@ui`, `@git`, `@test`), and issue references (`issue:armonia-api#6`).
+- **Immediate Completion Sync:** Keep `todo.txt` and [`ROADMAP.md`](./ROADMAP.md) synchronized with code reality. When a deliverable is implemented and verified, mark it completed (`x YYYY-MM-DD ...`) immediately before handing off to `git-commit`. Never leave verified work marked as pending or untracked.
 

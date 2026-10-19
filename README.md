@@ -12,6 +12,8 @@ The project is structured into decoupled repositories with concrete roles:
 | **`armonia-dashboard`** | `armonia-dashboard/` | Administrative mobile-first operational control surface for operators to review, follow-up, and acknowledge payments, authorize delayed-payment exceptions, release slots, and track packages. | Cloudflare Pages ($0 free tier) | [Vite+](https://viteplus.dev/), [Tailwind](https://tailwindcss.com/), [HTMX](https://htmx.org/), [Biome](https://biomejs.dev/)                                                                                                                                                                                                                                                                                                      |
 | **`armonia-landing`**   | `armonia-landing/`   | Public client-facing landing page, catalog showcase, and self-service reservation portal.                                                                                                      | Cloudflare Pages ($0 free tier) | [Vite+](https://viteplus.dev/), [Tailwind](https://tailwindcss.com/), [HTMX](https://htmx.org/), [Biome](https://biomejs.dev/)                                                                                                                                                                                                                                                                                                      |
 
+> 🗺️ **Engineering Trajectory & Active Tasks:** See [`ROADMAP.md`](./ROADMAP.md) and [`todo.txt`](./todo.txt).
+
 ```mermaid
 flowchart TD
     CV[Clients / Visitors] --> AL[armonia-landing]
