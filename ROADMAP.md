@@ -65,9 +65,10 @@ During our workspace audit on `2026-10-18`, we identified three areas where orig
 ### Milestone M2: SQLModel + Repository Refactor & Mutation Testing (`armonia-api#6`)
 - [x] Add `sqlmodel`, `sqlalchemy-libsql`, `pytest-mock`, and `mutmut` to `armonia-api/pyproject.toml`.
 - [x] Define `SQLModel` table entities in `app/models/` and configure `app/db/database.py` for Turso/SQLite portability.
-- [ ] Extract all SQL queries from `app/routers/` into `app/repositories/` and pure business logic into `app/services/`.
+- [x] Extract all SQL queries from `app/routers/` into `app/repositories/` and pure business logic into `app/services/`.
 - [x] Isolate external I/O in tests using `pytest-mock` and run `mutmut` audit against `app/services/` (100% kill score, ADR 0006).
-- [ ] Implement `GET /availability` and Group Roster API (`GET /rosters`, `POST /rosters/quick-checkin`) cleanly on top of the new service/repository layers (`armonia-api#3`).
+- [x] Implement `GET /availability` and Group Roster API (`GET /rosters`, `POST /rosters/quick-checkin`) cleanly on top of the new service/repository layers (`armonia-api#3`).
+- [x] Decouple auth adapter for proxy-headers (`Authelia`/`LLDAP`) and add multi-stage container build (`Dockerfile`).
 
 ### Milestone M3: Google Calendar Pull + Push Coordination (`armonia-api#4`)
 - [ ] Implement real Google Calendar REST integration in `app/services/calendar.py` (with `pytest-mock` test coverage).
@@ -75,12 +76,12 @@ During our workspace audit on `2026-10-18`, we identified three areas where orig
 - [ ] Verify end-to-end Push-on-Write status transitions (`[PAGO PENDIENTE]`, `[PAGO DIFERIDO]`, `[CONFIRMADO]`, event deletion on `RELEASED`/`CANCELLED`) and manual retry (`POST /bookings/{id}/sync-calendar`).
 
 ### Milestone M4: Mobile-First Admin Dashboard (`armonia-dashboard#1`)
-- [ ] Initialize `Vite+` (`vp`), `Tailwind CSS`, `HTMX`, and `Biome` in `armonia-dashboard`.
-- [ ] Delegate to **Anne Droid** (`feat/anne/*`) to implement the 5-state resilient operator views (`>= 44x44px` touch targets):
-  - Google OAuth login & session guard.
-  - 48-Hour Payment Follow-Up Queue with 1-tap `wa.me` links, Acknowledge Payment, Authorize Delayed Payment, and Release Slot actions.
-  - Agenda & Google Calendar sync health indicator (`SYNCED` vs `FAILED` retry).
-  - Multi-session package counter (`8 de 10`) & Group Workshop Roster check-in.
+- [x] Initialize `Vite+` (`vp`), `Tailwind CSS`, `HTMX`, and `Biome` in `armonia-dashboard`.
+- [x] Delegate to **Anne Droid** (`feat/anne/*`) to implement the 5-state resilient operator views (`>= 44x44px` touch targets):
+  - [x] 48-Hour Payment Follow-Up Queue with 1-tap `wa.me` links, Acknowledge Payment, and immediate visual feedback (PR #4).
+  - [x] Agenda & buffer indicator (15-min buffers rendered visually).
+  - [x] Accessible toasts, inline micro-modals, agenda date filter, and sticky mobile nav (PR #5).
+  - [ ] Multi-session package counter (`8 de 10`) & Group Workshop Roster check-in view.
 
 ### Milestone M5: Public Landing & Self-Service Portal (`armonia-landing#1`)
 - [ ] Initialize `Vite+` (`vp`), `Tailwind CSS`, `HTMX`, and `Biome` in `armonia-landing`.
