@@ -83,7 +83,20 @@ During our workspace audit on `2026-10-18`, we identified three areas where orig
   - [x] Accessible toasts, inline micro-modals, agenda date filter, and sticky mobile nav (PR #5).
   - [ ] Multi-session package counter (`8 de 10`) & Group Workshop Roster check-in view.
 
-### Milestone M5: Public Landing & Self-Service Portal (`armonia-landing#1`)
+### Milestone M5: Operator Intake, Client Directory & Dynamic Identity (`armonia-dashboard#6`, `armonia-dashboard#7`)
+- [ ] Replace static header span with dynamic operator identity pill from `GET /auth/me`.
+- [ ] Implement global "＋ Nueva Cita" intake modal with service selector and WhatsApp confirmation handoff.
+- [ ] Connect client autocomplete search in intake modal against `GET /clients?search=`.
+- [ ] Add interactive card actions on Agenda: "Mover Cita" (reschedule) and "Marcar Concluida" (complete).
+- [ ] Add Client Directory view with search, notes editing, and active package counter (`Sesión 8 de 10`).
+
+### Milestone M6: Clients CRUD & Booking Lifecycle (`armonia-api#12`, `armonia-api#13`)
+- [ ] Implement `GET /clients`, `POST /clients`, `GET /clients/{id}`, `PATCH /clients/{id}`, and `DELETE /clients/{id}`.
+- [ ] Implement client 360 profile returning consultation history, active packages, and clinical notes.
+- [ ] Implement `POST /bookings/{id}/reschedule` with collision & 15-min buffer protection and calendar sync.
+- [ ] Implement `POST /bookings/{id}/complete` to transition status to `COMPLETED` and update package sessions.
+
+### Milestone M7: Public Landing & Self-Service Portal (`armonia-landing#1`)
 - [ ] Initialize `Vite+` (`vp`), `Tailwind CSS`, `HTMX`, and `Biome` in `armonia-landing`.
 - [ ] Delegate to **Anne Droid** (`feat/anne/*`) to implement the holistic landing page & self-service booking flow:
   - Service catalog cards (`PRESENCIAL` & `ONLINE`).
