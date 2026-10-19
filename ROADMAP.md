@@ -54,13 +54,13 @@ During our workspace audit on `2026-10-18`, we identified three areas where orig
 - [x] Restructure `AGENTS.md` hierarchy across workspace root and sub-repositories.
 - [x] Provision per-repository NixOS `devShell`s (`flake.nix` + `.envrc` + `flake.lock`).
 - [x] Track workspace root as `armonia-del-ser/.profile` on Gitea.
-- [ ] Commit and open PRs for `AGENTS.md` + `flake.nix` in `armonia-dashboard` and `armonia-landing`.
+- [x] Commit and open PRs for `AGENTS.md` + `flake.nix` in `armonia-dashboard` ([PR #3](https://gitea.roadtotech.me/armonia-del-ser/armonia-dashboard/pulls/3)) and `armonia-landing` ([PR #3](https://gitea.roadtotech.me/armonia-del-ser/armonia-landing/pulls/3)).
 
 ### Milestone M1: Core API MVP Convergence (`armonia-api#3`)
 - [x] Implement orthogonal booking & payment state engine (`booking_status`, `payment_arrangement`, `payment_status`).
 - [x] Implement 48-hour follow-up visibility queue (`GET /bookings/follow-up-queue`), delayed-payment authorization, and deliberate slot release (`RELEASED`).
 - [x] Implement Google OAuth2 login/callback + Turso `admin_allowlist` & `admin_audit_log`.
-- [ ] Slice, commit (`git-commit`), and open PR for the uncommitted `feat/operational-truth-mvp` work in `armonia-api`.
+- [x] Slice, commit (`git-commit`), and open PR for `feat/operational-truth-mvp` in `armonia-api` ([PR #7](https://gitea.roadtotech.me/armonia-del-ser/armonia-api/pulls/7)).
 
 ### Milestone M2: SQLModel + Repository Refactor & Mutation Testing (`armonia-api#6`)
 - [ ] Add `sqlmodel`, `sqlalchemy-libsql`, `pytest-mock`, and `mutmut` to `armonia-api/pyproject.toml`.

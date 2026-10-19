@@ -2,9 +2,9 @@ x 2026-10-18 (A) Conduct operational discovery with Jasmin and assistant and doc
 x 2026-10-18 (A) Restructure AGENTS.md hierarchy across workspace root and sub-repositories +workspace @arch
 x 2026-10-18 (A) Provision and verify per-repository NixOS flake.nix and .envrc devShells +workspace @infra
 x 2026-10-18 (A) Initialize workspace root as armonia-del-ser/.profile repository on Gitea +workspace @git
-(A) Slice and commit pending AGENTS.md, README.md, and flake.nix changes in armonia-dashboard and open PR +dashboard @git
-(A) Slice and commit pending AGENTS.md, README.md, and flake.nix changes in armonia-landing and open PR +landing @git
-(A) Slice and commit pending orthogonal state engine, OAuth allowlist, AGENTS.md, and flake.nix changes in armonia-api and open PR +api @git issue:armonia-api#3
+x 2026-10-18 (A) Slice and commit pending AGENTS.md, README.md, and flake.nix changes in armonia-dashboard and open PR +dashboard @git
+x 2026-10-18 (A) Slice and commit pending AGENTS.md, README.md, and flake.nix changes in armonia-landing and open PR +landing @git
+x 2026-10-18 (A) Slice and commit pending orthogonal state engine, OAuth allowlist, AGENTS.md, and flake.nix changes in armonia-api and open PR +api @git issue:armonia-api#3
 (B) Add sqlmodel, sqlalchemy-libsql, pytest-mock, and mutmut dependencies to armonia-api/pyproject.toml +api @db issue:armonia-api#6
 (B) Define SQLModel table models in armonia-api/app/models/ and configure portable engine in app/db/database.py +api @db issue:armonia-api#6
 (B) Extract raw SQL queries from FastAPI routers into armonia-api/app/repositories/ and domain logic into app/services/ +api @arch issue:armonia-api#6
