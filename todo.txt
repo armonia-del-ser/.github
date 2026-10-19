@@ -13,9 +13,9 @@ x 2026-10-19 (B) Implement GET /availability endpoint with mandatory buffer coll
 x 2026-10-19 (B) Implement Group Workshop Roster API (GET /rosters, POST /rosters/quick-checkin) in armonia-api +api @backend issue:armonia-api#3
 x 2026-10-19 (A) Implement Clients CRUD, Autocomplete Search, and Client 360 profile in armonia-api +api @backend issue:armonia-api#12
 x 2026-10-19 (A) Implement Booking Reschedule and Complete Consultation lifecycle endpoints in armonia-api +api @backend issue:armonia-api#13
-(A) Implement Dynamic Operator Identity Pill in Header from GET /auth/me in armonia-dashboard +dashboard @ui issue:armonia-dashboard#6
-(A) Implement Nueva Cita modal with client autocomplete search and WhatsApp confirmation in armonia-dashboard +dashboard @ui issue:armonia-dashboard#6
-(A) Implement Agenda Card Reschedule & Complete actions and Client Directory View in armonia-dashboard +dashboard @ui issue:armonia-dashboard#7
+x 2026-10-19 (A) Implement Dynamic Operator Identity Pill in Header from GET /auth/me in armonia-dashboard +dashboard @ui issue:armonia-dashboard#6
+x 2026-10-19 (A) Implement Nueva Cita modal with client autocomplete search and WhatsApp confirmation in armonia-dashboard +dashboard @ui issue:armonia-dashboard#6
+x 2026-10-19 (A) Implement Agenda Card Reschedule & Complete actions and Client Directory View in armonia-dashboard +dashboard @ui issue:armonia-dashboard#7
 (C) Implement live Google Calendar API Pull-on-Read and Push-on-Write synchronization in armonia-api/app/services/calendar.py +api @gcal issue:armonia-api#4
 x 2026-10-19 (C) Scaffold Vite+, Tailwind, HTMX, and Biome project structure in armonia-dashboard +dashboard @ui issue:armonia-dashboard#1
 x 2026-10-19 (C) Implement 48-hour follow-up queue, payment acknowledgment, and agenda views in armonia-dashboard with Anne Droid +dashboard @ui issue:armonia-dashboard#1
