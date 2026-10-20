@@ -2,9 +2,11 @@
 armonia-api/
 armonia-dashboard/
 armonia-landing/
+armonia-homelab/
 
 # Editor / Obsidian / OS
 .obsidian/
+raw_feedback.md
 .vscode/
 .idea/
 *.swp
