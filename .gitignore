@@ -6,6 +6,7 @@ armonia-homelab/
 
 # Editor / Obsidian / OS
 .obsidian/
+.internal/
 raw_feedback.md
 .vscode/
 .idea/
