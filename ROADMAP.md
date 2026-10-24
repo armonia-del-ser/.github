@@ -102,3 +102,15 @@ During our workspace audit on `2026-10-18`, we identified three areas where orig
   - Service catalog cards (`PRESENCIAL` & `ONLINE`).
   - Live conflict-free slot picker consuming `GET /availability`.
   - Reservation confirmation with `ADS-XXXX` folio, SPEI CLABE instructions, and 1-tap WhatsApp receipt handoff.
+
+
+---
+
+## 💡 Parking Lot / Future Horizons
+
+Items identified during discovery and stakeholder reviews that offer clear business value but are intentionally deferred to protect focus on core booking, calendar synchronization, and payment audit invariants:
+
+### 1. Pre-Recorded Online Course Catalog (`armonia-landing`)
+* **Context:** Jazmín already owns recorded online courses, representing a high-margin, asynchronous offering with zero schedule-collision risk.
+* **Product Vision:** The public landing page (`armonia-landing`) can feature a dedicated digital catalog section showcasing available recorded courses, syllabus outlines, and pricing.
+* **Operational Flow ($0 Infrastructure):** Keep it frictionless—interested clients tap a WhatsApp deep link with a pre-formatted folio (`ADS-CURSO-xxx`), submit their SPEI transfer receipt, and the assistant provides unlisted course access links upon voucher acknowledgment. No costly video-hosting or LMS infrastructure required.
