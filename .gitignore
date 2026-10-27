@@ -12,3 +12,6 @@ raw_feedback.md
 .idea/
 *.swp
 .direnv/
+
+# Ephemeral agent worktrees
+.worktrees/
