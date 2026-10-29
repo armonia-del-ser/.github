@@ -81,7 +81,7 @@ During our workspace audit on `2026-10-18`, we identified three areas where orig
   - [x] 48-Hour Payment Follow-Up Queue with 1-tap `wa.me` links, Acknowledge Payment, and immediate visual feedback (PR #4).
   - [x] Agenda & buffer indicator (15-min buffers rendered visually).
   - [x] Accessible toasts, inline micro-modals, agenda date filter, and sticky mobile nav (PR #5).
-  - [ ] Multi-session package counter (`8 de 10`) & Group Workshop Roster check-in view.
+  - [x] Multi-session package counter (`8 de 10`) & Group Workshop Roster check-in view (PR #9).
 
 ### Milestone M5: Operator Intake, Client Directory & Dynamic Identity (`armonia-dashboard#6`, `armonia-dashboard#7`)
 - [x] Replace static header span with dynamic operator identity pill from `GET /auth/me`.
