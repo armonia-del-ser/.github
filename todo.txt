@@ -17,6 +17,7 @@ x 2026-10-19 (A) Implement Dynamic Operator Identity Pill in Header from GET /au
 x 2026-10-19 (A) Implement Nueva Cita modal with client autocomplete search and WhatsApp confirmation in armonia-dashboard +dashboard @ui issue:armonia-dashboard#6
 x 2026-10-19 (A) Implement Agenda Card Reschedule & Complete actions and Client Directory View in armonia-dashboard +dashboard @ui issue:armonia-dashboard#7
 (C) Implement live Google Calendar API Pull-on-Read and Push-on-Write synchronization in armonia-api/app/services/calendar.py +api @gcal issue:armonia-api#4
+(B) Return structured error_code (ALREADY_CHECKED_IN, CAPACITY_REACHED) in 409 conflict responses in armonia-api +api @backend issue:armonia-api#15
 x 2026-10-19 (C) Scaffold Vite+, Tailwind, HTMX, and Biome project structure in armonia-dashboard +dashboard @ui issue:armonia-dashboard#1
 x 2026-10-19 (C) Implement 48-hour follow-up queue, payment acknowledgment, and agenda views in armonia-dashboard with Anne Droid +dashboard @ui issue:armonia-dashboard#1
 x 2026-10-19 (C) Polish operator dashboard UI with toasts, inline micro-modals, agenda date filter, and sticky mobile nav +dashboard @ui issue:armonia-dashboard#1
